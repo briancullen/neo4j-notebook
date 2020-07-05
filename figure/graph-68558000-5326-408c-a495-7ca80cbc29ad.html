@@ -1,0 +1,50 @@
+
+    <html>
+    <head>
+      <script type="text/javascript" src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>>
+    </head>
+    <body>
+
+    <div id="68558000-5326-408c-a495-7ca80cbc29ad"></div>
+
+    <script type="text/javascript">
+      var nodes = [{"id": 25, "label": "RaspberryPi 2B", "group": "Device", "title": "<Node id=25 labels={'Device'} properties={'name': 'RaspberryPi 2B', 'type': 'RaspberryPi', 'id': 800000000003}>"}, {"id": 30, "label": "Trainer 1", "group": "Device", "title": "<Node id=30 labels={'Device'} properties={'name': 'Trainer 1', 'type': 'Bicycle', 'id': 800000000008}>"}, {"id": 24, "label": "RaspberryPi 1A", "group": "Device", "title": "<Node id=24 labels={'Device'} properties={'name': 'RaspberryPi 1A', 'type': 'RaspberryPi', 'id': 800000000002}>"}, {"id": 31, "label": "Trainer 2", "group": "Device", "title": "<Node id=31 labels={'Device'} properties={'name': 'Trainer 2', 'type': 'Bicycle', 'id': 800000000009}>"}, {"id": 38, "label": "Kahoot", "group": "Organisation", "title": "<Node id=38 labels={'Organisation'} properties={'name': 'Kahoot', 'id': 'kahoot'}>"}, {"id": 37, "label": "Hull", "group": "Site", "title": "<Node id=37 labels={'Site'} properties={'name': 'Hull', 'id': 'site0006'}>"}, {"id": 34, "label": "London Primary", "group": "Site", "title": "<Node id=34 labels={'Site'} properties={'name': 'London Primary', 'id': 'site0003'}>"}, {"id": 32, "label": "Ostrich", "group": "Site", "title": "<Node id=32 labels={'Site'} properties={'name': 'Ostrich', 'id': 'site0001'}>"}, {"id": 36, "label": "Mudhall", "group": "Site", "title": "<Node id=36 labels={'Site'} properties={'name': 'Mudhall', 'id': 'site0005'}>"}, {"id": 22, "label": "Device 1A", "group": "Device", "title": "<Node id=22 labels={'Device'} properties={'name': 'Device 1A', 'type': 'Intel', 'id': 800000000000}>"}, {"id": 39, "label": "CyberDyne", "group": "Organisation", "title": "<Node id=39 labels={'Organisation'} properties={'name': 'CyberDyne', 'id': 'cyberdyne'}>"}, {"id": 35, "label": "London Secondary", "group": "Site", "title": "<Node id=35 labels={'Site'} properties={'name': 'London Secondary', 'id': 'site0004'}>"}, {"id": 33, "label": "Sandy Beach", "group": "Site", "title": "<Node id=33 labels={'Site'} properties={'name': 'Sandy Beach', 'id': 'site0002'}>"}, {"id": 27, "label": "Compact 2B", "group": "Device", "title": "<Node id=27 labels={'Device'} properties={'name': 'Compact 2B', 'type': 'Apple', 'id': 800000000005}>"}, {"id": 28, "label": "Embedded 1", "group": "Device", "title": "<Node id=28 labels={'Device'} properties={'name': 'Embedded 1', 'type': 'AMD', 'id': 800000000006}>"}, {"id": 29, "label": "Embedded 2", "group": "Device", "title": "<Node id=29 labels={'Device'} properties={'name': 'Embedded 2', 'type': 'AMD', 'id': 800000000007}>"}, {"id": 23, "label": "Device 1B", "group": "Device", "title": "<Node id=23 labels={'Device'} properties={'name': 'Device 1B', 'type': 'Intel', 'id': 800000000001}>"}, {"id": 40, "label": "The Cooperative", "group": "Organisation", "title": "<Node id=40 labels={'Organisation'} properties={'name': 'The Cooperative', 'id': 'coop'}>"}, {"id": 26, "label": "Compact 1A", "group": "Device", "title": "<Node id=26 labels={'Device'} properties={'name': 'Compact 1A', 'type': 'Apple', 'id': 800000000004}>"}];
+      var edges = [{"from": 38, "to": 37, "label": "HAS_SITE"}, {"from": 38, "to": 34, "label": "HAS_SITE"}, {"from": 38, "to": 32, "label": "HAS_SITE"}, {"from": 34, "to": 24, "label": "HAS_DEVICE"}, {"from": 37, "to": 31, "label": "HAS_DEVICE"}, {"from": 36, "to": 30, "label": "HAS_DEVICE"}, {"from": 39, "to": 35, "label": "HAS_SITE"}, {"from": 39, "to": 33, "label": "HAS_SITE"}, {"from": 35, "to": 27, "label": "HAS_DEVICE"}, {"from": 32, "to": 29, "label": "HAS_DEVICE"}, {"from": 32, "to": 22, "label": "HAS_DEVICE"}, {"from": 40, "to": 36, "label": "HAS_SITE"}, {"from": 33, "to": 28, "label": "HAS_DEVICE"}, {"from": 33, "to": 26, "label": "HAS_DEVICE"}, {"from": 33, "to": 25, "label": "HAS_DEVICE"}, {"from": 33, "to": 23, "label": "HAS_DEVICE"}];
+
+      var container = document.getElementById("68558000-5326-408c-a495-7ca80cbc29ad");
+
+      var data = {
+        nodes: nodes,
+        edges: edges
+      };
+
+      var options = {
+          nodes: {
+              shape: 'dot',
+              size: 25,
+              font: {
+                  size: 14
+              }
+          },
+          edges: {
+              font: {
+                  size: 14,
+                  align: 'middle'
+              },
+              color: 'gray',
+              arrows: {
+                  to: {enabled: true, scaleFactor: 0.5}
+              },
+              smooth: {enabled: false}
+          },
+          physics: {
+              enabled: true
+          }
+      };
+
+      var network = new vis.Network(container, data, options);
+
+    </script>
+    </body>
+    </html>
+    

@@ -1,0 +1,50 @@
+
+    <html>
+    <head>
+      <script type="text/javascript" src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>>
+    </head>
+    <body>
+
+    <div id="93114c36-9fb6-49dc-bd96-fb085a5fc949"></div>
+
+    <script type="text/javascript">
+      var nodes = [{"id": 129, "label": "Wind Turbine 1", "group": "Device", "title": "<Node id=129 labels={'Device'} properties={'name': 'Wind Turbine 1', 'integration': 'C-2-C', 'id': '00000000-0000-4000-8008-000000000006', 'type': 'Wind Turbine'}>"}, {"id": 135, "label": "Cyberdyne Primary", "group": "Site", "title": "<Node id=135 labels={'Site'} properties={'name': 'Cyberdyne Primary', 'id': 'cyberdyne/site-1'}>"}, {"id": 131, "label": "Turbo Trainer 1", "group": "Device", "title": "<Node id=131 labels={'Device'} properties={'integration': 'Direct', 'name': 'Turbo Trainer 1', 'id': '00000000-0000-4000-8008-000000000008', 'type': 'Bicycle'}>"}, {"id": 124, "label": "UPS 1B", "group": "Device", "title": "<Node id=124 labels={'Device'} properties={'name': 'UPS 1B', 'integration': 'Gateway', 'id': '00000000-0000-4000-8008-000000000001', 'type': 'UPS'}>"}, {"id": 137, "label": "Clayhill", "group": "Site", "title": "<Node id=137 labels={'Site'} properties={'name': 'Clayhill', 'id': 'edf/clayhill'}>"}, {"id": 132, "label": "Turbo Trainer 2", "group": "Device", "title": "<Node id=132 labels={'Device'} properties={'integration': 'Gateway', 'name': 'Turbo Trainer 2', 'id': '00000000-0000-4000-8008-000000000009', 'type': 'Bicycle'}>"}, {"id": 138, "label": "Hulley", "group": "Site", "title": "<Node id=138 labels={'Site'} properties={'name': 'Hulley', 'id': 'edf/hulley'}>"}, {"id": 125, "label": "Battery 1A", "group": "Device", "title": "<Node id=125 labels={'Device'} properties={'name': 'Battery 1A', 'integration': 'C-2-C', 'id': '00000000-0000-4000-8008-000000000002', 'type': 'Battery'}>"}, {"id": 126, "label": "Battery 2B", "group": "Device", "title": "<Node id=126 labels={'Device'} properties={'name': 'Battery 2B', 'integration': 'C-2-C', 'id': '00000000-0000-4000-8008-000000000003', 'type': 'Battery'}>"}, {"id": 136, "label": "Cyberdyne Secondary", "group": "Site", "title": "<Node id=136 labels={'Site'} properties={'name': 'Cyberdyne Secondary', 'id': 'cyberdyne/site-2'}>"}, {"id": 127, "label": "EV 1A", "group": "Device", "title": "<Node id=127 labels={'Device'} properties={'name': 'EV 1A', 'integration': 'C-2-C', 'id': '00000000-0000-4000-8008-000000000004', 'type': 'Electric Vehicle'}>"}, {"id": 130, "label": "Wind Turbine 2", "group": "Device", "title": "<Node id=130 labels={'Device'} properties={'name': 'Wind Turbine 2', 'integration': 'Direct', 'id': '00000000-0000-4000-8008-000000000007', 'type': 'Wind Turbine'}>"}, {"id": 134, "label": "Sandy Heath", "group": "Site", "title": "<Node id=134 labels={'Site'} properties={'name': 'Sandy Heath', 'id': 'arquiva/sandy-heath'}>"}, {"id": 128, "label": "EV 2B", "group": "Device", "title": "<Node id=128 labels={'Device'} properties={'name': 'EV 2B', 'integration': 'C-2-C', 'id': '00000000-0000-4000-8008-000000000005', 'type': 'Electric Vehicle'}>"}, {"id": 123, "label": "UPS 1A", "group": "Device", "title": "<Node id=123 labels={'Device'} properties={'name': 'UPS 1A', 'integration': 'Gateway', 'id': '00000000-0000-4000-8008-000000000000', 'type': 'UPS'}>"}, {"id": 133, "label": "Ostrich", "group": "Site", "title": "<Node id=133 labels={'Site'} properties={'name': 'Ostrich', 'id': 'arquiva/ostrich'}>"}];
+      var edges = [{"from": 135, "to": 131, "label": "HAS_DEVICE"}, {"from": 135, "to": 124, "label": "HAS_DEVICE"}, {"from": 137, "to": 132, "label": "HAS_DEVICE"}, {"from": 138, "to": 129, "label": "HAS_DEVICE"}, {"from": 138, "to": 125, "label": "HAS_DEVICE"}, {"from": 136, "to": 127, "label": "HAS_DEVICE"}, {"from": 136, "to": 126, "label": "HAS_DEVICE"}, {"from": 134, "to": 128, "label": "HAS_DEVICE"}, {"from": 133, "to": 130, "label": "HAS_DEVICE"}, {"from": 133, "to": 123, "label": "HAS_DEVICE"}];
+
+      var container = document.getElementById("93114c36-9fb6-49dc-bd96-fb085a5fc949");
+
+      var data = {
+        nodes: nodes,
+        edges: edges
+      };
+
+      var options = {
+          nodes: {
+              shape: 'dot',
+              size: 25,
+              font: {
+                  size: 14
+              }
+          },
+          edges: {
+              font: {
+                  size: 14,
+                  align: 'middle'
+              },
+              color: 'gray',
+              arrows: {
+                  to: {enabled: true, scaleFactor: 0.5}
+              },
+              smooth: {enabled: false}
+          },
+          physics: {
+              enabled: true
+          }
+      };
+
+      var network = new vis.Network(container, data, options);
+
+    </script>
+    </body>
+    </html>
+    

@@ -1,0 +1,11 @@
+id,name,type
+"800000000000",Device 1A,Intel
+"800000000001",Device 1B,Intel
+"800000000002",RaspberryPi 1A,RaspberryPi
+"800000000003",RaspberryPi 2B,RaspberryPi
+"800000000004",Compact 1A,Apple
+"800000000005",Compact 2B,Apple
+"800000000006",Embedded 1,AMD
+"800000000007",Embedded 2,AMD
+"800000000008",Trainer 1,Bicycle
+"800000000009",Trainer 2,Bicycle
